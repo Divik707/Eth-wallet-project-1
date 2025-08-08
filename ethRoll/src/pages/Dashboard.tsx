@@ -83,9 +83,9 @@ function SendETH() {
           {isPending ? "Sending..." : "Send ETH"}
         </button>
 
-        {isSuccess && (
+        {isSuccess && data && (
           <p className="text-green-400 break-words text-sm">
-            Transaction Hash: <a href={`https://etherscan.io/tx/${data?.hash}`} target="_blank" rel="noopener noreferrer" className="underline">{data?.hash}</a>
+            Transaction Hash: <a href={`https://etherscan.io/tx/${data}`} target="_blank" rel="noopener noreferrer" className="underline">{data}</a>
           </p>
         )}
       </div>
