@@ -50,7 +50,7 @@ function SendETH() {
 
     try {
       const value = parseEther(amount);
-      sendTransaction({ to, value });
+      sendTransaction({ to:to as `0x${string}`, value });
     } catch (error) {
       alert("Invalid ETH amount");
     }
